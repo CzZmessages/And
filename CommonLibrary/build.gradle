@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    api 'androidx.appcompat:appcompat:1.2.0'
+    api  'com.google.android.material:material:1.2.1'
+    api  'androidx.constraintlayout:constraintlayout:2.0.1'
+    api  files('libs\\QWeather_Public_Android_V4.17.jar')
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    api  'androidx.core:core-ktx:1.6.0'
+//    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    // If you want to use the GPU Filters
+    api  'jp.co.cyberagent.android:gpuimage:2.1.0'
+    api  'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    api  'com.otaliastudios:cameraview:2.7.2'
+    api  'com.blankj:utilcodex:1.28.4'
+    api  'com.github.chrisbanes:PhotoView:2.3.0'
+    //app-updater
+    api  'com.github.jenly1314.AppUpdater:app-updater:1.2.0'
+    //app-dialog
+    api  'com.github.jenly1314.AppUpdater:app-dialog:1.2.0'
+    api  'com.squareup.okhttp3:okhttp:3.14.+'
+    api  'com.google.code.gson:gson:2.6.+'
+    api "io.reactivex.rxjava3:rxjava:3.0.4"
+    api 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+}

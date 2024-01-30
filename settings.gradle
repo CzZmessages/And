@@ -1,0 +1,3 @@
+rootProject.name = "MyBlueTestDemo"
+include ':app'
+include ':CommonLibrary'
